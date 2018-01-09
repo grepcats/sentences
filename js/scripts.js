@@ -1,47 +1,50 @@
-//first function
-var capFirstLast = function(sentence) {
-	var bestLetter = sentence.charAt(0);
-	var worstLetter = sentence.charAt(sentence.length-1);
-	return bestLetter.toUpperCase() + worstLetter.toUpperCase();
-  };
+$(document).ready(function() {
 
-//second function
-var revFirstLast = function(sentence) {
-	var goldLetter = sentence.charAt(0);
-	var bronzeLetter = sentence.charAt(sentence.length-1);
-  return bronzeLetter + goldLetter;
-}
+	$("h1").click(function() {
+		alert("This is a header");
+	});
 
-//assigning variables
-var sentence = prompt("Type a sentence!");
+	//first function
+	var capFirstLast = function(sentence) {
+		var bestLetter = sentence.charAt(0);
+		var worstLetter = sentence.charAt(sentence.length-1);
+		return bestLetter.toUpperCase() + worstLetter.toUpperCase();
+	  };
 
-//var firstOutput = capFirstLast(sentence);
+	//second function
+	var revFirstLast = function(sentence) {
+		var goldLetter = sentence.charAt(0);
+		var bronzeLetter = sentence.charAt(sentence.length-1);
+	  return bronzeLetter + goldLetter;
+	}
 
-//alert(firstOutput);
+	//assigning variables
+	var sentence = prompt("Type a sentence!");
 
-//var secondOutput = revFirstLast(firstOutput);
+	//var firstOutput = capFirstLast(sentence);
+	//alert(firstOutput);
+	//var secondOutput = revFirstLast(firstOutput);
+	//alert(secondOutput);
+	//third function
+	var thirdFunction = function(sentence) {
+		var oneOutput = capFirstLast(sentence);
+	  var twoOutput = revFirstLast(oneOutput);
+	  return sentence + twoOutput;
+	}
 
-//alert(secondOutput);
+	alert(thirdFunction(sentence));
 
-//third function
-var thirdFunction = function(sentence) {
-	var oneOutput = capFirstLast(sentence);
-  var twoOutput = revFirstLast(oneOutput);
-  return sentence + twoOutput;
-}
+	//fourth function
+	var fourthFunction = function(sentence) {
+	  var halfSentence = sentence.length/2;
+	  var halfSentenceChar = sentence.charAt(Math.floor(halfSentence)-1);
+	  var revHalfSentenceChar = halfSentenceChar + sentence;
+	  var makeArray = revHalfSentenceChar.split("");
+	  var revArray = makeArray.reverse();
+	  var joinArray = revArray.join("");
+	  return joinArray;
 
-alert(thirdFunction(sentence));
+	}
 
-//fourth function
-var fourthFunction = function(sentence) {
-  var halfSentence = sentence.length/2;
-  var halfSentenceChar = sentence.charAt(Math.floor(halfSentence)-1);
-  var revHalfSentenceChar = halfSentenceChar + sentence;
-  var makeArray = revHalfSentenceChar.split("");
-  var revArray = makeArray.reverse();
-  var joinArray = revArray.join("");
-  return joinArray;
-
-}
-
-alert(fourthFunction(thirdFunction(sentence)));
+	alert(fourthFunction(thirdFunction(sentence)));
+});
