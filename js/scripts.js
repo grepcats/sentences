@@ -4,6 +4,18 @@ $(document).ready(function() {
 		alert("This is a header");
 	});
 
+	//When you click on the left one, it should show you the original sentence. If you click the other one, it should hide the original sentence and show the encoded one. Use Bootstrap to organize and style your page.
+
+	//image that shows you the original Sentences
+	$(".showText").click(function() {
+		alert(sentence);
+	});
+
+	$(".hideText").click(function() {
+		alert(fourthFunction(thirdFunction(sentence)));
+	})
+	//image that hides the oriignal sentence and shows the encoded ones
+
 	//first function
 	var capFirstLast = function(sentence) {
 		var bestLetter = sentence.charAt(0);
