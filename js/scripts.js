@@ -12,7 +12,6 @@ var revFirstLast = function(sentence) {
   return bronzeLetter + goldLetter;
 }
 
-
 //assigning variables
 var sentence = prompt("Type a sentence!");
 
@@ -33,15 +32,15 @@ var thirdFunction = function(sentence) {
 
 //alert(thirdFunction(sentence));
 
-
-
 //fourth function
 var fourthFunction = function(sentence) {
-  var sentenceLength = sentence.length;
-  var halfSentence = sentenceLength/2;
-  var halfSentenceNum = Math.floor(halfSentence);
-  var halfSentenceChar = sentence.charAt(halfSentenceNum-1);
-  return halfSentenceChar + sentence;
+  var halfSentence = sentence.length/2;
+  var halfSentenceChar = sentence.charAt(Math.floor(halfSentence)-1);
+  var revHalfSentenceChar = halfSentenceChar + sentence;
+  var makeArray = revHalfSentenceChar.split("");
+  var revArray = makeArray.reverse();
+  var joinArray = revArray.join("");
+  return joinArray;
 
 }
 
