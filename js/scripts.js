@@ -30,7 +30,7 @@ var thirdFunction = function(sentence) {
   return sentence + twoOutput;
 }
 
-//alert(thirdFunction(sentence));
+alert(thirdFunction(sentence));
 
 //fourth function
 var fourthFunction = function(sentence) {
