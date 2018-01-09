@@ -31,4 +31,18 @@ var thirdFunction = function(sentence) {
   return sentence + twoOutput;
 }
 
-alert(thirdFunction(sentence));
+//alert(thirdFunction(sentence));
+
+
+
+//fourth function
+var fourthFunction = function(sentence) {
+  var sentenceLength = sentence.length;
+  var halfSentence = sentenceLength/2;
+  var halfSentenceNum = Math.floor(halfSentence);
+  var halfSentenceChar = sentence.charAt(halfSentenceNum-1);
+  return halfSentenceChar + sentence;
+
+}
+
+alert(fourthFunction(thirdFunction(sentence)));
